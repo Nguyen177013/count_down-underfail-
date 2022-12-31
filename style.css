@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Open Sans";
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2f363e;
+    background: url(img/test.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+canvas{
+    position: absolute;
+}
+#title h2{
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+#time{
+    display: flex;
+    gap: 40px;
+    color: #fff;
+}
+#time .timing{
+    position: absolute;
+    font-size: 14px;
+    bottom: 30px;
+}
+#time .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+    border-radius: 50%;
+}
+#time .circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: #fff;
+    stroke: #ccc;
+    stroke-width: 4;
+    transform: translate(5px,5px);
+    transition: all .2s ease-out;
+}
+#time .circle svg circle:nth-child(2){
+    stroke: var(--primary);
+    stroke-dasharray: 440;
+    filter: drop-shadow(0 0 20px var(--primary));
+}
+#time div{
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    top: 45px;
+    color: rgb(93, 93, 93);
+}
+#pc{
+    display: block;
+}
+#mobile{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #pc{
+        display: none;
+    }
+    #mobile{
+        display: block;
+    }
+    #title h2{
+        font-size: 40px;
+    }
+    #time{
+        gap: 0;
+    }
+    #time .circle{
+        width: 125px;
+        height: 125px;
+    }
+    #time .circle svg{
+        width: 125px;
+        height: 125px;
+    }
+    #time div{
+        top: 28px;
+    }
+    #time .timing{
+        bottom: 27px;
+    }
+    #time .circle svg circle:nth-child(2){
+        stroke-dasharray: 314;
+    }
+}

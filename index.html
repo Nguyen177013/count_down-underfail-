@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Counting Down</title>
+</head>
+
+<body>
+    <div id="title">
+        <h2>countdown before new year 2023</h2>
+    </div>
+    <div id="time">
+        <div class="circle">
+            <svg id ="pc">
+                <circle cx ="70" cy ="70" r="70"></circle>
+                <circle id="hh" cx="70" cy="70" r="70" style="--primary:rgb(9, 74, 194);"></circle>
+            </svg>
+            <svg id ="mobile">
+                <circle cx ="60" cy ="55" r="50"></circle>
+                <circle id="hh-m" cx ="60" cy ="55" r="50" style="--primary:rgb(9, 74, 194);"></circle>
+            </svg>
+            <div id="hours">00</div>
+            <p class="timing">hours</p>
+        </div>
+        <div class="circle">
+            <svg id ="pc">
+                <circle cx ="70" cy ="70" r="70"></circle>
+                <circle id="mm" cx ="70" cy ="70" r="70" style="--primary:rgb(216, 171, 6)"></circle>
+            </svg>
+            <svg id ="mobile">
+                <circle cx ="60" cy ="55" r="50"></circle>
+                <circle id="mm-m" cx ="60" cy ="55" r="50" style="--primary:rgb(216, 171, 6)"></circle>
+            </svg>
+            <div id="minutes">00</div>
+            <p class="timing">minutes</p>
+        </div>
+        <div class="circle">
+            <svg id ="pc">
+                <circle cx ="70" cy ="70" r="70"></circle>
+                <circle id="ss" cx ="70" cy ="70" r="70" style="--primary:rgb(148, 11, 183)"></circle>
+            </svg>
+            <svg id ="mobile">
+                <circle cx ="60" cy ="55" r="50"></circle>
+                <circle id="ss-m" cx ="60" cy ="55" r="50" style="--primary:rgb(148, 11, 183)"></circle>
+            </svg>
+            <div id="seconds">00</div>
+            <p class="timing">seconds</p>
+        </div>
+    </div>
+    <audio id="audio" src=""></audio>
+    <script src="fireworks.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
